@@ -4,20 +4,22 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "extensions": [
-        "ms-toolsai.jupyter",
-        "tianjiaohuang.octave-debug"
-    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // "paulosilva.vsc-octave-debugger",
+                "toasty-technologies.octave",
+                "LucasFA.octaveexecution",
+                "tusindfryd.octave-formatter",
+                "leafvmaple.octave",
+                "paulosilva.vsc-octave-debugger"
+            ]
+        }
+    },
     // "settings": {
     //     "pythonPath": "/usr/local/bin/octave"
     // },
     "runArgs": [
         "--privileged"
-    ],
-    "features": {
-        // ...
-        "ghcr.io/devcontainers/features/python:1": {
-        },
-        // ...
-    }
+    ]
 }
