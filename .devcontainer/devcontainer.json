@@ -1,0 +1,23 @@
+{
+    "name": "Octave Development",
+    // "dockerFile": "Dockerfile",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "extensions": [
+        "ms-toolsai.jupyter",
+        "tianjiaohuang.octave-debug"
+    ],
+    // "settings": {
+    //     "pythonPath": "/usr/local/bin/octave"
+    // },
+    "runArgs": [
+        "--privileged"
+    ],
+    "features": {
+        // ...
+        "ghcr.io/devcontainers/features/python:1": {
+        },
+        // ...
+    }
+}
