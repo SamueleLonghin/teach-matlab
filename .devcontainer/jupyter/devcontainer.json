@@ -1,0 +1,32 @@
+{
+    "name": "Octave Jupyter",
+    // "dockerFile": "Dockerfile",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/workspace",
+    // "settings": {
+    //     "python.pythonPath": "/usr/bin/python3",
+    //     "jupyter.notebookFileRoot": "/workspace"
+    // },
+    // "postCreateCommand": "python3 -m octave_kernel.install --user",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "toasty-technologies.octave",
+                "LucasFA.octaveexecution",
+                "tusindfryd.octave-formatter",
+                "leafvmaple.octave",
+                "paulosilva.vsc-octave-debugger",
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    // "settings": {
+    //     "pythonPath": "/usr/local/bin/octave"
+    // },
+    "runArgs": [
+        "--privileged"
+    ]
+}

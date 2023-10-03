@@ -12,7 +12,7 @@
                 "LucasFA.octaveexecution",
                 "tusindfryd.octave-formatter",
                 "leafvmaple.octave",
-                "paulosilva.vsc-octave-debugger"
+                "paulosilva.vsc-octave-debugger" 
             ]
         }
     },
