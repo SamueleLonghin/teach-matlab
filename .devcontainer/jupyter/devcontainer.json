@@ -4,12 +4,14 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/workspaces/matlab",
     // "settings": {
     //     "python.pythonPath": "/usr/bin/python3",
     //     "jupyter.notebookFileRoot": "/workspace"
     // },
     // "postCreateCommand": "python3 -m octave_kernel.install --user",
+    "postStartCommand": "jupyter notebook --port=8888 --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password='' --no-browser --kernel octave",
+    // "postStartCommand": "jupyter console --kernel octave",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -23,10 +25,10 @@
             ]
         }
     },
-    // "settings": {
-    //     "pythonPath": "/usr/local/bin/octave"
-    // },
-    "runArgs": [
-        "--privileged"
-    ]
+    "containerEnv": {
+        "DISPLAY": "0.0"
+    },
+    // "runArgs": [
+    //     "--privileged"
+    // ]
 }

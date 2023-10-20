@@ -11,6 +11,12 @@
             "program": "${file}",
             "octave": "octave",
             "sourceFolder": "${workspaceFolder}"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch Jupyter",
+            "url": "http://localhost:8888"
         }
     ]
 }

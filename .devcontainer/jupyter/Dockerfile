@@ -14,15 +14,16 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 RUN pip3 install --upgrade pip
 RUN pip3 install jupyter
+RUN pip3 install octave_kernel
 
-# Abilita l'estensione Octave per Jupyter
-RUN python3 -m octave_kernel install --user
+# # Abilita l'estensione Octave per Jupyter
+# RUN python3 -m octave_kernel install --user
 
-# Crea una cartella di lavoro
-WORKDIR /workspace
+# # Crea una cartella di lavoro
+# WORKDIR /workspace
 
 # Esponi la porta 8888 per Jupyter
 EXPOSE 8888
 
 # Avvia Jupyter Notebook all'avvio
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
+# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
