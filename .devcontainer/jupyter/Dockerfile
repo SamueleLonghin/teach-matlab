@@ -16,8 +16,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install jupyter
 RUN pip3 install octave_kernel
 
-# # Abilita l'estensione Octave per Jupyter
-# RUN python3 -m octave_kernel install --user
+# Abilita l'estensione Octave per Jupyter
+RUN pip3 install octave_kernel
 
 # # Crea una cartella di lavoro
 # WORKDIR /workspace
