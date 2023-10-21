@@ -1,6 +1,5 @@
 {
     "name": "Octave Development",
-    // "dockerFile": "Dockerfile",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -16,9 +15,6 @@
             ]
         }
     },
-    // "settings": {
-    //     "pythonPath": "/usr/local/bin/octave"
-    // },
     "runArgs": [
         "--privileged"
     ]
