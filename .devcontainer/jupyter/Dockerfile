@@ -1,5 +1,10 @@
-# Usa un'immagine di base che include Octave
-FROM debian:bullseye-slim
+FROM python:3.12.0
+
+# Preparo per utilizzare il kernel
+RUN pip install cairosvg 
+RUN pip install metakernel 
+RUN apt-get install libpangocairo-1.0-0
+
 
 # Installa Octave
 RUN apt-get update && \
@@ -7,23 +12,23 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Installa Jupyter Notebook e Python
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+
+# Installa Jupyter
+RUN apt-get update 
 RUN pip3 install --upgrade pip
 RUN pip3 install jupyter
-RUN pip3 install octave_kernel
 
-# Abilita l'estensione Octave per Jupyter
-RUN pip3 install octave_kernel
+# RUN mkdir /home/jupyter-gpp-kernel/
+# COPY .devcontainer/jupyter\ cool/jupyter-gpp-kernel /home/jupyter-gpp-kernel/
+# RUN git clone https://github.com/samuelelonghin/jupyter-gpp-kernel.git .devcontainer/jupyter\ cool/jupyter-gpp-kernel
 
-# # Crea una cartella di lavoro
-# WORKDIR /workspace
+# Clono il kernel
+RUN git clone https://github.com/samuelelonghin/jupyter-gpp-kernel.git /usr/local/share/jupyter/kernels/jupyter-gpp-kernel
 
-# Esponi la porta 8888 per Jupyter
-EXPOSE 8888
+# Abilita l'estensione GPP Octave per Jupyter
+RUN jupyter kernelspec install --user /usr/local/share/jupyter/kernels/jupyter-gpp-kernel
+# RUN jupyter kernelspec install --user .devcontainer/jupyter\ cool/jupyter-gpp-kernel
+# RUN export PYTHONPATH="~/.local/share/jupyter/kernels:${PYTHONPATH}"
 
-# Avvia Jupyter Notebook all'avvio
-# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
+# Aggiungo la cartella con i kernel alla path di python. In questo modo troverà il modulo del kernel
+ENV PYTHONPATH="/usr/local/share/jupyter/kernels:${PYTHONPATH}"

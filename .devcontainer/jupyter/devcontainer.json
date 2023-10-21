@@ -1,17 +1,10 @@
 {
-    "name": "Octave Jupyter",
-    // "dockerFile": "Dockerfile",
+    "name": "Octave Jupyter Figo Figo",
     "build": {
         "dockerfile": "Dockerfile"
     },
     "workspaceFolder": "/workspaces/matlab",
-    // "settings": {
-    //     "python.pythonPath": "/usr/bin/python3",
-    //     "jupyter.notebookFileRoot": "/workspace"
-    // },
-    // "postCreateCommand": "python3 -m octave_kernel.install --user",
     "postStartCommand": "jupyter notebook --port=8888 --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password='' --no-browser --kernel octave",
-    // "postStartCommand": "jupyter console --kernel octave",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -27,8 +20,5 @@
     },
     "containerEnv": {
         "DISPLAY": "0.0"
-    },
-    // "runArgs": [
-    //     "--privileged"
-    // ]
+    }
 }
