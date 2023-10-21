@@ -4,7 +4,7 @@
         "dockerfile": "Dockerfile"
     },
     "workspaceFolder": "/workspaces/matlab",
-    "postStartCommand": "jupyter notebook --port=8888 --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password='' --no-browser --kernel octave",
+    "postStartCommand": "jupyter notebook --port=8888 --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''  --kernel jupyter-gpp-kernel",
     "customizations": {
         "vscode": {
             "extensions": [
