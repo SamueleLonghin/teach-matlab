@@ -1,6 +1,8 @@
 # Istruzioni per l'utilizzo
 ## 1: Creare un fork della repository
+Video su [come creare un fork](https://drive.google.com/file/d/1uBv8oM3XFL-4opujbXSTfzhBuAlppfsi/view?usp=share_link)
 ## 2: Posizionarsi all'interno della repository forkata (quella di proprietà vostra)
+Istruzioni su [come visualizzare la lista di repositories](https://github.com/SamueleLonghin/teach/blob/f42c79213c7736b74088a9432fb0c4b2ef630309/Visualizzare%20la%20lista%20di%20Repositories.md)
 ## 3: Aprire il menù Codespace
 * Cliccare sul pulsantone verde `Code`
 * Posizionarsi sulla tab `Codespaces`
