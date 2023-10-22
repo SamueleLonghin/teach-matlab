@@ -17,7 +17,7 @@ Questo menù può apparire in due modi:
 ### Creazione del Codespace
 Se è la prima volta che utilizziamo questa repository dobbiamo creare il codespace (spazio di lavoro)
   <img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/419098iF6F6403CABCDAACC" alt="Codespace" width="300px"/>
-* Cliccare sull'icona `+`
+* Cliccare sull'icona `...`
 * Scegliere la voce `New with options`
 
   <img src="https://docs.github.com/assets/cb-79930/mw-1440/images/help/codespaces/advanced-options.webp" alt="Codespace" width="500px"/>
